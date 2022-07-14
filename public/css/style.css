@@ -77,7 +77,7 @@ body{
     right: 0;
 }
 
-.top_menu_searchbar{
+input.top_menu_searchbar{
     box-sizing: border-box;
     background-color: #FAFAFA;
     width: 215px;
@@ -87,11 +87,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.top_menu_searchbar > p{
     font-weight: 400;
     font-size: 12px;
     color: #979797;
+}
+input.top_menu_searchbar:focus {
+    outline:none;
+}
+input.top_menu_searchbar:focus::placeholder{
+    opacity: 0;
+}
+input.top_menu_searchbar::placeholder {
+    text-align: center;
 }
 
 .top_menu_icons{
@@ -156,6 +163,7 @@ body{
 .story_icon > img{
     position: absolute;
     border-radius: 50%;
+    cursor: pointer;
 }
 .story > p{
     position: absolute;
@@ -215,11 +223,13 @@ body{
 .post_author > img{
     border-radius: 50%;
     margin-right: 15px;
+    cursor: pointer;
 }
 .post_author > p{
     font-weight: 500;
     font-size: 14px;
     line-height: 16.41px;
+    cursor: pointer;
 }
 .post_buttons{
     height: 38px;
@@ -290,6 +300,7 @@ body{
 .profile > img{
     width: 56px;
     height: 56px;
+    cursor: pointer;
 }
 .profile_name{
     height: 34px;
@@ -303,6 +314,7 @@ body{
 }
 .profile_name > b{
     color: #262626;
+    cursor: pointer;
 }
 
 .suggestions{
@@ -345,6 +357,7 @@ body{
 .suggested_profile > img{
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 .suggested_profile_name{
     height: 31px;
@@ -358,6 +371,7 @@ body{
     color: #262626;
     font-size: 14px;
     line-height: 16px;
+    cursor: pointer;
 }
 .suggested_profile_name > p{
     color: #8E8E8E;

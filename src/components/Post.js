@@ -4,6 +4,7 @@ export default function Post(props){
   let post = props.post_info;
   const [liked, setLike] = useState(false);
   const [numLikes, setNumLikes] = useState(post.num_likes);
+  const [bookmarked, setBookmarked] = useState(false);
 
   const like_post = () => {
     if(liked) return;
@@ -14,6 +15,9 @@ export default function Post(props){
     setLike(false);
     setNumLikes(numLikes-1);
   }
+  const toggle_bookmark_post = () => {
+    setBookmarked(!bookmarked);
+  };
 
   return (
     <div className="post">
@@ -36,7 +40,8 @@ export default function Post(props){
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div className="right_button">
-            <ion-icon name="bookmark-outline"></ion-icon>
+            {(!bookmarked) ? <ion-icon name="bookmark-outline" onClick={toggle_bookmark_post}></ion-icon>
+                           : <ion-icon name="bookmark" onClick={toggle_bookmark_post}></ion-icon>}
           </div>
         </div>
       </div>
