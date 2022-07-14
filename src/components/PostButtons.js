@@ -12,7 +12,7 @@ export default function PostButtons({liked, bookmarked, like_post, dislike_post,
         </div>
         <div className="right_button">
           {(!bookmarked) ? <ion-icon name="bookmark-outline" onClick={toggle_bookmark_post}></ion-icon>
-                          : <ion-icon name="bookmark" onClick={toggle_bookmark_post}></ion-icon>}
+                         : <ion-icon name="bookmark" onClick={toggle_bookmark_post}></ion-icon>}
         </div>
       </div>
     </div>

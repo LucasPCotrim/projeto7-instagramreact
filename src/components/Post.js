@@ -4,7 +4,6 @@ import PostHeader from "./PostHeader";
 import PostButtons from "./PostButtons";
 import PostLikes from "./PostLikes";
 
-
 export default function Post(props){
   let post = props.post_info;
   const [liked, setLike] = useState(false);
@@ -12,9 +11,10 @@ export default function Post(props){
   const [bookmarked, setBookmarked] = useState(false);
 
   const like_post = () => {
-    if(liked) return;
-    setLike(true);
-    setNumLikes(numLikes+1);
+    if(!liked){
+      setLike(true);
+      setNumLikes(numLikes+1);
+    }; 
   };
   const dislike_post = () => {
     setLike(false);
@@ -26,7 +26,10 @@ export default function Post(props){
 
   return (
     <div className="post">
-      <PostHeader profile_pic={post.profile_pic} profile_name={post.profile_name} />
+      <PostHeader
+        profile_pic={post.profile_pic}
+        profile_name={post.profile_name}
+      />
       <img src={post.post_img} alt="" onClick={like_post}/>
       <PostButtons
         liked={liked}

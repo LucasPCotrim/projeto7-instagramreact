@@ -8,12 +8,12 @@ ion-icon:hover {
 }
 ion-icon#liked {
     color: red;
-    animation: pop_when_liked 0.25s linear;
+    animation: like_button_turn_red 0.25s linear;
 }
 ion-icon#liked:hover {
     opacity: 1.0;
 }
-@keyframes pop_when_liked {
+@keyframes like_button_turn_red {
   0% {
     transform: scale(1.0);
   }
@@ -184,6 +184,7 @@ input.top_menu_searchbar::placeholder {
     width: 614px;
 }
 .post{
+    position: relative;
     box-sizing: border-box;
     background-color: #FFFFFF;
     width: 614px;
