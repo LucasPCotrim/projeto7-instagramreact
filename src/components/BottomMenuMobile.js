@@ -1,14 +1,16 @@
 
 export default function BottomMenuMobile(){
+  const bottom_menu_icons = ["home",
+                              "search-outline",
+                              "add-circle-outline",
+                              "heart-outline",
+                              "person-outline"];
   return (
     <div class="bottom_menu_mobile">
       <div>
-        <ion-icon name="home"></ion-icon>
-        <ion-icon name="search-outline"></ion-icon>
-        <ion-icon name="add-circle-outline"></ion-icon>
-        <ion-icon name="heart-outline"></ion-icon>
-        <ion-icon name="person-outline"></ion-icon>
+        {bottom_menu_icons.map((icon)=>{return <ion-icon name={icon}></ion-icon>})}
       </div>
     </div>
   );
 }
+

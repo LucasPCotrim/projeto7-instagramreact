@@ -1,5 +1,10 @@
 
 export default function TopMenu() {
+  const top_menu_icons = ["paper-plane-outline",
+                          "compass-outline",
+                          "heart-outline",
+                          "person-outline"];
+
   return (
     <div class="top_menu">
       <div>
@@ -12,12 +17,10 @@ export default function TopMenu() {
           <p>Pesquisar</p>
         </div>
         <div class="top_menu_icons">
-          <ion-icon name="paper-plane-outline"></ion-icon>
-          <ion-icon name="compass-outline"></ion-icon>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="person-outline"></ion-icon>
+          {top_menu_icons.map((icon)=>{return <ion-icon name={icon}></ion-icon>})}
         </div>
       </div>
     </div>
   );
 }
+
