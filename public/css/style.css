@@ -340,6 +340,7 @@ input.top_menu_searchbar::placeholder {
     color: #262626;
     font-size: 12px;
     line-height: 14px;
+    cursor: pointer;
 }
 
 .suggestion{
@@ -380,6 +381,7 @@ input.top_menu_searchbar::placeholder {
 .suggested_profile_action{
     color: #139EF2;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .sidebar_foot_menu{

@@ -1,4 +1,9 @@
-import { useState } from "react";
+import { useState } from "react"
+
+import PostHeader from "./PostHeader";
+import PostButtons from "./PostButtons";
+import PostLikes from "./PostLikes";
+
 
 export default function Post(props){
   let post = props.post_info;
@@ -21,34 +26,20 @@ export default function Post(props){
 
   return (
     <div className="post">
-      <div className="post_header">
-        <div>
-          <div className="post_author">
-            <img src={post.profile_pic} alt="" width="32px" height="32px" />
-            <p>{post.profile_name}</p>
-          </div>
-          <ion-icon name="ellipsis-horizontal"></ion-icon>
-        </div>
-      </div>
+      <PostHeader profile_pic={post.profile_pic} profile_name={post.profile_name} />
       <img src={post.post_img} alt="" onClick={like_post}/>
-      <div className="post_buttons">
-        <div>
-          <div className="left_buttons">
-            {(!liked) ? <ion-icon name="heart-outline" onClick={like_post}></ion-icon>
-                      : <ion-icon name="heart" id="liked" onClick={dislike_post}></ion-icon>}
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-          <div className="right_button">
-            {(!bookmarked) ? <ion-icon name="bookmark-outline" onClick={toggle_bookmark_post}></ion-icon>
-                           : <ion-icon name="bookmark" onClick={toggle_bookmark_post}></ion-icon>}
-          </div>
-        </div>
-      </div>
-      <div className="post_likes">
-        <img src={post.liked_by_pic} alt="" width="20px" height="20px" />
-        <p>Curtido por <b>{post.liked_by_profile_name}</b> e <b>outras {numLikes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')} pessoas</b></p>
-      </div>
+      <PostButtons
+        liked={liked}
+        bookmarked={bookmarked}
+        like_post={like_post}
+        dislike_post={dislike_post}
+        toggle_bookmark_post={toggle_bookmark_post}
+      />
+      <PostLikes
+        liked_by_pic={post.liked_by_pic}
+        liked_by_profile_name={post.liked_by_profile_name}
+        numLikes={numLikes}
+      />
     </div>
   );
 }
