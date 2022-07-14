@@ -1,95 +1,33 @@
-
+import Post from "./Post";
 
 export default function PostsColumn(){
+  const posts = [{profile_name: 'meowed',
+                  profile_pic: 'imgs/story_meowed 1.png',
+                  post_img: 'imgs/gato-telefone 1.png',
+                  liked_by_profile_name: 'respondeai',
+                  liked_by_pic: 'imgs/story_respondeai 1.png',
+                  num_likes: 10.1523
+                 },
+                 {profile_name: 'barked',
+                  profile_pic: 'imgs/story_barked 1.png',
+                  post_img: 'imgs/dog 1.png',
+                  liked_by_profile_name: 'adorable_animals',
+                  liked_by_pic: 'imgs/adorableanimals 2.png',
+                  num_likes: 99.159
+                 },
+                 {profile_name: 'meowed',
+                  profile_pic: 'imgs/story_meowed 1.png',
+                  post_img: 'imgs/gato-telefone 1.png',
+                  liked_by_profile_name: 'respondeai',
+                  liked_by_pic: 'imgs/story_respondeai 1.png',
+                  num_likes: 101.523
+                 }
+                ];
+
   return (
     <div class="posts_column">
-      <div class="post">
-        <div class="post_header">
-          <div>
-            <div class="post_author">
-              <img src="imgs/story_meowed 1.png" alt="" width="32px" height="32px" />
-              <p>meowed</p>
-            </div>
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <img src="imgs/gato-telefone 1.png" alt="" />
-        <div class="post_buttons">
-          <div>
-            <div class="left_buttons">
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-            <div class="right_button">
-              <ion-icon name="bookmark-outline"></ion-icon>
-            </div>
-          </div>
-        </div>
-        <div class="post_likes">
-          <img src="imgs/story_respondeai 1.png" alt="" width="20px" height="20px" />
-          <p>Curtido por <b>respondeai</b> e <b>outras 101.523 pessoas</b></p>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="post_header">
-          <div>
-            <div class="post_author">
-              <img src="imgs/story_barked 1.png" alt="" width="32px" height="32px" />
-              <p>barked</p>
-            </div>
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <img src="imgs/dog 1.png" alt="" />
-        <div class="post_buttons">
-          <div>
-            <div class="left_buttons">
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-            <div class="right_button">
-              <ion-icon name="bookmark-outline"></ion-icon>
-            </div>
-          </div>
-        </div>
-        <div class="post_likes">
-          <img src="imgs/adorableanimals 2.png" alt="" width="20px" height="20px" />
-          <p>Curtido por <b>adorable_animals</b> e <b>outras 99.159 pessoas</b></p>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="post_header">
-          <div>
-              <div class="post_author">
-                  <img src="imgs/story_meowed 1.png" alt="" width="32px" height="32px" />
-                  <p>meowed</p>
-              </div>
-              <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <img src="imgs/gato-telefone 1.png" alt="" />
-        <div class="post_buttons">
-          <div>
-            <div class="left_buttons">
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-            <div class="right_button">
-              <ion-icon name="bookmark-outline"></ion-icon>
-            </div>
-          </div>
-        </div>
-        <div class="post_likes">
-          <img src="imgs/story_respondeai 1.png" alt="" width="20px" height="20px" />
-          <p>Curtido por <b>respondeai</b> e <b>outras 101.523 pessoas</b></p>
-        </div>
-      </div>
-        
+      {posts.map((post)=>{return <Post post_info={post} />})}
     </div>
   );
 }
+
