@@ -1,7 +1,20 @@
-
+import { useState } from "react";
 
 export default function Post(props){
   let post = props.post_info;
+  const [liked, setLike] = useState(false);
+  const [numLikes, setNumLikes] = useState(post.num_likes);
+
+  const like_post = () => {
+    if(liked) return;
+    setLike(true);
+    setNumLikes(numLikes+1);
+  };
+  const dislike_post = () => {
+    setLike(false);
+    setNumLikes(numLikes-1);
+  }
+
   return (
     <div className="post">
       <div className="post_header">
@@ -13,11 +26,12 @@ export default function Post(props){
           <ion-icon name="ellipsis-horizontal"></ion-icon>
         </div>
       </div>
-      <img src={post.post_img} alt="" />
+      <img src={post.post_img} alt="" onClick={like_post}/>
       <div className="post_buttons">
         <div>
           <div className="left_buttons">
-            <ion-icon name="heart-outline"></ion-icon>
+            {(!liked) ? <ion-icon name="heart-outline" onClick={like_post}></ion-icon>
+                      : <ion-icon name="heart" id="liked" onClick={dislike_post}></ion-icon>}
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
@@ -28,7 +42,7 @@ export default function Post(props){
       </div>
       <div className="post_likes">
         <img src={post.liked_by_pic} alt="" width="20px" height="20px" />
-        <p>Curtido por <b>{post.liked_by_profile_name}</b> e <b>outras {post.num_likes} pessoas</b></p>
+        <p>Curtido por <b>{post.liked_by_profile_name}</b> e <b>outras {numLikes.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')} pessoas</b></p>
       </div>
     </div>
   );

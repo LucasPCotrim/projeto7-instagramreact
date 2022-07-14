@@ -1,7 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 ion-icon {
     font-size: 22px;
+    cursor: pointer;
 }
+ion-icon:hover {
+    opacity: 0.5;
+}
+ion-icon#liked {
+    color: red;
+    animation: pop_when_liked 0.25s linear;
+}
+ion-icon#liked:hover {
+    opacity: 1.0;
+}
+@keyframes pop_when_liked {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+
 b{
     font-weight: 500;
 }
