@@ -1,6 +1,6 @@
 import SidebarProfile from "./SidebarProfile";
 import SidebarSuggestion from "./SidebarSuggestion"
-
+import SidebarFootMenu from "./SidebarFootMenu";
 
 export default function SidebarContainer(){
 
@@ -40,11 +40,7 @@ export default function SidebarContainer(){
           </div>
           {suggestions.map((suggestion,index)=>{return <SidebarSuggestion suggestion_info={suggestion} key={index}/>})}
         </div>
-        <div className="sidebar_foot_menu">
-          <p>Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma</p>
-          <br />
-          <p>© 2021 INSTAGRAM DO FACEBOOK</p>
-        </div>
+        <SidebarFootMenu />
       </div>
     </div>
   );
