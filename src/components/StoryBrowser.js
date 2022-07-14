@@ -22,14 +22,14 @@ export default function StoryBrowser(){
 
                    {profile_name: 'filomoderna',
                     img: 'imgs/story_filomoderna 1.png'},
-                    
+
                    {profile_name: 'memeriago',
                     img: 'imgs/story_memeriagourmet 1.png'}]
 
   return (
-    <div class="story_browser">
-      {stories.map((story)=>{return <Story profile_name={story.profile_name} img={story.img}/>})}
-      <div class="story_right_button">
+    <div className="story_browser">
+      {stories.map((story,index)=>{return <Story profile_name={story.profile_name} img={story.img} key={index}/>})}
+      <div className="story_right_button">
         <img src="imgs/chevron-forward-circle 1.png" alt="" width="32px" height="32px" />
       </div>   
     </div>

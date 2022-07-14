@@ -6,9 +6,9 @@ export default function BottomMenuMobile(){
                               "heart-outline",
                               "person-outline"];
   return (
-    <div class="bottom_menu_mobile">
+    <div className="bottom_menu_mobile">
       <div>
-        {bottom_menu_icons.map((icon)=>{return <ion-icon name={icon}></ion-icon>})}
+        {bottom_menu_icons.map((icon,index)=>{return <ion-icon name={icon} key={index}></ion-icon>})}
       </div>
     </div>
   );

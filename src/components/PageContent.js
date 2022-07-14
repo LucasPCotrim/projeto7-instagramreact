@@ -4,7 +4,7 @@ import SidebarContainer from "./SidebarContainer";
 
 export default function PageContent() {
   return (
-    <div class="page_content">
+    <div className="page_content">
       <MainPage />
       <SidebarContainer />
     </div>
