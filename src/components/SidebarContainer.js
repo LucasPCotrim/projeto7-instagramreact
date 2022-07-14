@@ -5,23 +5,23 @@ import SidebarFootMenu from "./SidebarFootMenu";
 export default function SidebarContainer(){
 
   const suggestions = [{profile_name: 'bad.vibes.memes',
-                        profile_pic: 'imgs/badvibesmemes 1.png',
+                        profile_pic: './imgs/badvibesmemes 1.png',
                         profile_status: 'Segue você'
                        },
                        {profile_name: 'chibirdart',
-                        profile_pic: 'imgs/chibirdart 1.png',
+                        profile_pic: './imgs/chibirdart 1.png',
                         profile_status: 'Segue você'
                        },
                        {profile_name: 'razoes.para.acreditar',
-                        profile_pic: 'imgs/razoesparaacreditar 1.png',
+                        profile_pic: './imgs/razoesparaacreditar 1.png',
                         profile_status: 'Novo no Instagram'
                        },
                        {profile_name: 'adorable_animals',
-                        profile_pic: 'imgs/adorableanimals 1.png',
+                        profile_pic: './imgs/adorableanimals 1.png',
                         profile_status: 'Segue você'
                        },
                        {profile_name: 'smallcutecats',
-                        profile_pic: 'imgs/smallcutecats 1.png',
+                        profile_pic: './imgs/smallcutecats 1.png',
                         profile_status: 'Segue você'
                        }
                       ];
@@ -31,7 +31,7 @@ export default function SidebarContainer(){
       <div className="sidebar">
         <SidebarProfile profile_name='catanacomics'
                         name='Catana'
-                        img='imgs/catanacomics 1.png'
+                        img='./imgs/catanacomics 1.png'
           />
         <div className="suggestions">
           <div className="suggestions_title">
