@@ -5,6 +5,8 @@ import SidebarProfile from "./SidebarProfile";
 import SidebarSuggestion from "./SidebarSuggestion"
 import SidebarFootMenu from "./SidebarFootMenu";
 
+import './SidebarContainer.css'
+
 export default function SidebarContainer(){
 
   const {globalState, } = useContext(GlobalContext);

@@ -1,4 +1,4 @@
-
+import './Story.css'
 
 export default function Story(props){
   return (

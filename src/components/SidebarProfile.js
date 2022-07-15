@@ -1,5 +1,4 @@
-
-
+import './SidebarProfile.css'
 
 export default function SidebarProfile(props){
   return (

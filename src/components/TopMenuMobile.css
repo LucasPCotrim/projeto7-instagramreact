@@ -1,0 +1,20 @@
+
+.top_menu_mobile{
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 614px) {
+
+  .top_menu_mobile {
+      position: absolute;
+      top: 0;
+      left: 3.27vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 93.46vw;
+      height: 54px;
+  }
+}

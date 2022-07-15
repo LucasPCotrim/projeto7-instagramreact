@@ -5,6 +5,8 @@ import PostHeader from "./PostHeader";
 import PostButtons from "./PostButtons";
 import PostLikes from "./PostLikes";
 
+import './Post.css'
+
 
 
 export default function Post(props){
@@ -45,7 +47,9 @@ export default function Post(props){
         profile_name={post.profile_name}
       />
       <img src={post.post_img} alt="" onClick={like_post}/>
-      <div className = "pop_up_heart"></div>
+      <div className = "pop_up_heart">
+        <img src="./imgs/vectorpaint.svg" alt=""/>
+      </div>
       <PostButtons
         liked={liked}
         bookmarked={bookmarked}

@@ -1,0 +1,29 @@
+
+.page_content{
+  width: 935px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+/* Desktop no Sidebar */
+@media (max-width: 935px) {
+  .page_content{
+      width: 100vw;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 614px) {
+  .page_content{
+      margin: 0 0 54px 0;
+  }
+}
+

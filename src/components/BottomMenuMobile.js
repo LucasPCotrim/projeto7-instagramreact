@@ -1,3 +1,4 @@
+import './BottomMenuMobile.css'
 
 export default function BottomMenuMobile(){
   const bottom_menu_icons = ["home",

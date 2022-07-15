@@ -1,4 +1,4 @@
-
+import './PostButtons.css'
 
 export default function PostButtons({liked, bookmarked, like_post, dislike_post, toggle_bookmark_post, open_comments}){
   return (

@@ -1,5 +1,5 @@
 
-
+import './PostHeader.css'
 
 export default function PostHeader(props){
   return (

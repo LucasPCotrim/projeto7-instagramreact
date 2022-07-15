@@ -3,6 +3,8 @@ import { GlobalContext } from "../contexts/Context";
 
 import Post from "./Post";
 
+import './PostsColumn.css'
+
 export default function PostsColumn(){
   const {globalState, } = useContext(GlobalContext);
 

@@ -3,6 +3,8 @@ import { GlobalContext } from "../contexts/Context";
 
 import Story from "./Story";
 
+import './StoryBrowser.css'
+
 
 export default function StoryBrowser(){
   const {globalState, } = useContext(GlobalContext);

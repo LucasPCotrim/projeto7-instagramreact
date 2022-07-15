@@ -1,0 +1,14 @@
+
+.posts_column{
+  width: 614px;
+}
+
+
+
+/* Mobile */
+@media (max-width: 614px) {
+
+  .posts_column{
+      width: 100vw;
+  }
+}

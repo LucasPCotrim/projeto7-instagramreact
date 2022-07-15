@@ -3,6 +3,8 @@ import { GlobalContext } from "../contexts/Context";
 
 import CommentWindow from "./CommentWindow";
 
+import './CommentScreen.css'
+
 
 export default function CommentScreen() {
   const {globalState, setGlobalState} = useContext(GlobalContext);

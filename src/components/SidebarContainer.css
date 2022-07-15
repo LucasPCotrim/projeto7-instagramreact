@@ -1,0 +1,27 @@
+
+.sidebar_container{
+  position: relative;
+  width: 293px;
+}
+.sidebar{
+  width: 293px;
+  margin-top: 23px;
+  position: fixed;
+}
+
+
+/* Desktop no Sidebar */
+@media (max-width: 935px) {
+  .sidebar{
+      display: none;
+  }
+}
+
+
+
+/* Mobile */
+@media (max-width: 614px) {
+  .sidebar{
+      display: none;
+  }
+}

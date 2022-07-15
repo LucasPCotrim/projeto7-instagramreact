@@ -1,4 +1,4 @@
-
+import './CommentWindow.css'
 
 
 export default function CommentWindow({selected_post, exit_comments_page}){

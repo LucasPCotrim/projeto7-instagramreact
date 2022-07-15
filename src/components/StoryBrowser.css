@@ -1,0 +1,33 @@
+
+.story_browser{
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  width: 614px;
+  height: 118px;
+  border-radius: 3px;
+  border: 1px solid #DBDBDB;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 614px) {
+  .story_browser{
+      background-color: #FAFAFA;
+      width: 100vw;
+      height: 121px;
+      margin: 0 0 0 0;
+      border-radius: initial;
+      border: initial;
+      padding: 0;
+  }
+}

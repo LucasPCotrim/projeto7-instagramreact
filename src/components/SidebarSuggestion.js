@@ -1,4 +1,4 @@
-
+import './SidebarSuggestion.css'
 
 export default function SidebarSuggestion(props){
   let suggestion = props.suggestion_info;

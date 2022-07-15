@@ -1,6 +1,8 @@
 import MainPage from "./MainPage";
 import SidebarContainer from "./SidebarContainer";
 
+import './PageContent.css'
+
 
 export default function PageContent() {
   return (

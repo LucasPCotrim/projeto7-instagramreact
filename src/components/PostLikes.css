@@ -1,0 +1,30 @@
+.post_likes{
+  height: 38px;
+  width: 614px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.post_likes > img{
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-left: 17px;
+  margin-right: 5px;
+}
+.post_likes > p{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16.41px;
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 614px) {
+
+  .post_likes{
+      width: 100vw;
+  }
+}

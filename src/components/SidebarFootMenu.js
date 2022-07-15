@@ -1,3 +1,4 @@
+import './SidebarFootMenu.css'
 
 export default function SidebarFootMenu(){
   return (

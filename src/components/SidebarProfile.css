@@ -1,0 +1,27 @@
+
+.profile{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile > img{
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+}
+.profile_name{
+  height: 34px;
+  margin-left: 17px;
+  line-height: 16px;
+}
+.profile_name > p{
+  color: #8E8E8E;
+  font-style: light;
+  font-weight: 300;
+}
+.profile_name > b{
+  color: #262626;
+  cursor: pointer;
+}
+

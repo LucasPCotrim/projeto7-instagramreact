@@ -1,4 +1,4 @@
-
+import './PostLikes.css'
 
 export default function PostLikes({liked_by_pic, liked_by_profile_name, numLikes}){
   return (

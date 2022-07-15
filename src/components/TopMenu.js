@@ -1,3 +1,4 @@
+import './TopMenu.css'
 
 export default function TopMenu() {
   const top_menu_icons = ["paper-plane-outline",
