@@ -33,6 +33,31 @@
   height: 100%;
 }
 
+.comment_container .post_author{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.post_author > img{
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.post_author > p{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.41px;
+  cursor: pointer;
+}
+.linha_horizontal{
+  background-color: #DBDBDB;
+  width: 100%;
+  height: 1px;
+  margin: 0px;
+}
+
 
 /* Mobile */
 @media (max-width: 614px) {
@@ -44,7 +69,6 @@
   .comment_window img > {
     width: 100%;
     height: 40%;
-    object-fit: cover;
   }
   .comment_window > .comment_container{
     width: 100%;

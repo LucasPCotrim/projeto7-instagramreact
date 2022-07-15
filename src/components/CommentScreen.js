@@ -22,7 +22,10 @@ export default function CommentScreen() {
   return (
     <>
       {(globalState.screen === 'comments_page')
-        ? <CommentWindow selected_post = {selected_post} exit_comments_page={exit_comments_page}/>
+        ? <div className="comment_screen">
+            <div className="shaded_area" onClick={exit_comments_page}></div>
+            <CommentWindow selected_post = {selected_post} exit_comments_page={exit_comments_page}/>
+          </div>
         : <></> }
     </>
   );
