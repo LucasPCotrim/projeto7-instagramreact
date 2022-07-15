@@ -1,13 +1,13 @@
 
 
-export default function PostButtons({liked, bookmarked, like_post, dislike_post, toggle_bookmark_post}){
+export default function PostButtons({liked, bookmarked, like_post, dislike_post, toggle_bookmark_post, open_comments}){
   return (
     <div className="post_buttons">
       <div>
         <div className="left_buttons">
           {(!liked) ? <ion-icon name="heart-outline" onClick={like_post}></ion-icon>
                     : <ion-icon name="heart" id="liked" onClick={dislike_post}></ion-icon>}
-          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-icon name="chatbubble-outline" onClick={open_comments}></ion-icon>
           <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
         <div className="right_button">
