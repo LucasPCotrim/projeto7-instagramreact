@@ -26,7 +26,7 @@ export default function PostsColumn(){
 
   return (
     <div className="posts_column">
-      {posts.map((post, index)=>(<Post post_info={post} key={index}/>))}
+      {posts.map((post, index)=>(<Post post_info={post} id={index} key={index}/>))}
     </div>
   );
 }

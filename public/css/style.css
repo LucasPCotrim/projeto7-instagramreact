@@ -199,6 +199,43 @@ input.top_menu_searchbar::placeholder {
 .post > img{
     width: 612px;
 }
+.post .pop_up_heart{
+    background-color: rgba(255, 255, 255, 0.781);
+    -webkit-mask: url(../imgs/heart.svg) no-repeat center;
+    mask: url(../imgs/heart.svg) no-repeat center;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+}
+.post .pop_up_heart_animation{
+    animation: heart_pop_up 1.0s linear;
+}
+@keyframes heart_pop_up {
+    0% {
+      transform: scale(1.0);
+      opacity: 0;
+    }
+    20% {
+      transform: scale(1.6);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(1.0);
+      opacity: 1;
+    }
+    95% {
+      transform: scale(1.0);
+      opacity: 1.0;
+    }
+    100% {
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+
 .post_header{
     display: flex;
     justify-content: center;

@@ -5,7 +5,8 @@ import PostButtons from "./PostButtons";
 import PostLikes from "./PostLikes";
 
 export default function Post(props){
-  let post = props.post_info;
+  const post = props.post_info;
+  const post_id = 'post_' + props.id;
   const [liked, setLike] = useState(false);
   const [numLikes, setNumLikes] = useState(post.num_likes);
   const [bookmarked, setBookmarked] = useState(false);
@@ -15,6 +16,11 @@ export default function Post(props){
       setLike(true);
       setNumLikes(numLikes+1);
     }; 
+
+    let DOM_pop_up_heart = document.getElementById(post_id).querySelector('.pop_up_heart');
+    DOM_pop_up_heart.classList.remove('pop_up_heart_animation'); // reset animation
+    void DOM_pop_up_heart.offsetWidth; // trigger reflow
+    DOM_pop_up_heart.classList.add('pop_up_heart_animation'); // start animation
   };
   const dislike_post = () => {
     setLike(false);
@@ -24,13 +30,15 @@ export default function Post(props){
     setBookmarked(!bookmarked);
   };
 
+
   return (
-    <div className="post">
+    <div className="post" id={post_id}>
       <PostHeader
         profile_pic={post.profile_pic}
         profile_name={post.profile_name}
       />
       <img src={post.post_img} alt="" onClick={like_post}/>
+      <div className = "pop_up_heart"></div>
       <PostButtons
         liked={liked}
         bookmarked={bookmarked}
