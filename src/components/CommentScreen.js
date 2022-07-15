@@ -1,6 +1,8 @@
 import { useContext } from "react"
 import { GlobalContext } from "../contexts/Context";
 
+import CommentWindow from "./CommentWindow";
+
 
 export default function CommentScreen() {
   const {globalState, setGlobalState} = useContext(GlobalContext);
@@ -15,18 +17,11 @@ export default function CommentScreen() {
     window.onscroll=null; //re-enable scrolling
   }
 
-  
-
   return (
     <>
-      {(globalState.screen === 'comments_page') ? <div className="comment_screen">
-                                                    <div className="shaded_area" onClick={exit_comments_page}></div>
-                                                    <div className="comment_window">
-                                                      <img src={selected_post.post_img} alt={'Post by' + selected_post.profile_name}/>
-                                                      <div className="comment_container"></div>
-                                                    </div>
-                                                  </div>
-                                                : <></> }
+      {(globalState.screen === 'comments_page')
+        ? <CommentWindow selected_post = {selected_post} exit_comments_page={exit_comments_page}/>
+        : <></> }
     </>
   );
 }
