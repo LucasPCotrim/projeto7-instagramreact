@@ -38,7 +38,7 @@ export default function SidebarContainer(){
             <div className="suggestions_title_left"><b>Sugestões para você</b></div>
             <div className="suggestions_title_right"><b>Ver tudo</b></div>
           </div>
-          {suggestions.map((suggestion,index)=>{return <SidebarSuggestion suggestion_info={suggestion} key={index}/>})}
+          {suggestions.map((suggestion,index)=>(<SidebarSuggestion suggestion_info={suggestion} key={index}/>))}
         </div>
         <SidebarFootMenu />
       </div>
