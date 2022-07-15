@@ -9,7 +9,6 @@ import PostLikes from "./PostLikes";
 
 export default function Post(props){
   const post = props.post_info;
-  const post_id = 'post_' + props.id;
   const [liked, setLike] = useState(false);
   const [numLikes, setNumLikes] = useState(post.num_likes);
   const [bookmarked, setBookmarked] = useState(false);
@@ -21,7 +20,7 @@ export default function Post(props){
       setLike(true);
       setNumLikes(numLikes+1);
     }; 
-    animate_heart_popup(post_id);
+    animate_heart_popup(post.id);
   };
   const dislike_post = () => {
     setLike(false);
@@ -31,13 +30,16 @@ export default function Post(props){
     setBookmarked(!bookmarked);
   };
   const open_comments = () => {
-    setGlobalState({...globalState, screen: 'comments_page'});
+    let posts = globalState.posts.map((p)=>{
+      return (p.id===post.id) ? {...p, selected: true} : {...p}
+    });
+    setGlobalState({...globalState, screen: 'comments_page', posts: posts});
     disableScrolling(); //disable scrolling
   }
 
 
   return (
-    <div className="post" id={post_id}>
+    <div className="post" id={post.id}>
       <PostHeader
         profile_pic={post.profile_pic}
         profile_name={post.profile_name}
@@ -62,9 +64,7 @@ export default function Post(props){
 }
 
 
-
-
-
+// Auxiliary Functions
 
 function animate_heart_popup(post_id){
   let DOM_pop_up_heart = document.getElementById(post_id).querySelector('.pop_up_heart');
