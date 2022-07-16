@@ -22,7 +22,6 @@ export default function Post(props){
       setLike(true);
       setNumLikes(numLikes+1);
     }; 
-    animate_heart_popup(post.id);
   };
   const dislike_post = () => {
     setLike(false);
@@ -47,9 +46,13 @@ export default function Post(props){
         profile_name={post.profile_name}
       />
       <img src={post.post_img} alt="" onClick={like_post}/>
-      <div className = "pop_up_heart">
-        <img src="./imgs/vectorpaint.svg" alt=""/>
-      </div>
+      {(liked) ?  <div className = "pop_up_heart pop_up_heart_animation">
+                    <img src="./imgs/vectorpaint.svg" alt=""/>
+                  </div>
+               :  <div className = "pop_up_heart">
+                    <img src="./imgs/vectorpaint.svg" alt=""/>
+                  </div>}
+      
       <PostButtons
         liked={liked}
         bookmarked={bookmarked}
@@ -69,13 +72,6 @@ export default function Post(props){
 
 
 // Auxiliary Functions
-
-function animate_heart_popup(post_id){
-  let DOM_pop_up_heart = document.getElementById(post_id).querySelector('.pop_up_heart');
-  DOM_pop_up_heart.classList.remove('pop_up_heart_animation');
-  void DOM_pop_up_heart.offsetWidth;
-  DOM_pop_up_heart.classList.add('pop_up_heart_animation');
-}
 
 function disableScrolling(){
   var x=window.scrollX;
